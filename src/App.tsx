@@ -22,7 +22,7 @@ const App: React.FC = () => {
   const [error, setError] = useState('');
 
   const userId = 1;
-  const baseUrl = "https://currency-converter-api-jaya-0c2e2ea717c7.herokuapp.com";
+  const baseUrl = "https://currency-converter-api-jaya-3340416685c1.herokuapp.com/";
 
   const convertCurrency = async () => {
     setLoading(true);
