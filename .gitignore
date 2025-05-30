@@ -1,0 +1,33 @@
+# dependencies
+/node_modules
+
+# production build
+/dist
+/build
+
+# environment variables
+.env
+.env.*.local
+!.env.example
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# editor directories and settings
+.vscode
+.idea
+.DS_Store
+
+# testing
+/coverage
+/cypress/screenshots
+/cypress/videos
+
+# OS-specific
+Thumbs.db
+ehthumbs.db
+
+# optional: yarn/lock file (if you only use npm)
+/yarn.lock
