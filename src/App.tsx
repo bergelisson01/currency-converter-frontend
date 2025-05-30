@@ -22,12 +22,13 @@ const App: React.FC = () => {
   const [error, setError] = useState('');
 
   const userId = 1;
+  const baseUrl = "https://currency-converter-api-jaya-0c2e2ea717c7.herokuapp.com";
 
   const convertCurrency = async () => {
     setLoading(true);
     setError('');
     try {
-      const response = await axios.post('http://localhost:3000/transactions/convert', {
+      const response = await axios.post(`${baseUrl}/transactions/convert`, {
         userId,
         fromCurrency,
         toCurrency,
@@ -45,7 +46,7 @@ const App: React.FC = () => {
 
   const fetchTransactions = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/transactions?userId=${userId}`);
+      const response = await axios.get(`${baseUrl}/transactions?userId=${userId}`);
       setTransactions(response.data);
     } catch (err) {
       console.error('Failed to fetch transactions', err);
